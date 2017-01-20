@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-11-23T16:23:12Z" product-name="tgm_reveal">
+		<header/>
+		<body>
+			<trans-unit id="tx_tgm_reveal_domain_model_reveal"><source>Reveal</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_yes"><source>Yes</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_no"><source>No</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_selectBy"><source>Include via</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_selectBy_fal"><source>FAL (File Abstraction Layer)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_selectBy_fal_label"><source>Select your background via FAL (File Abstraction Layer)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_selectBy_link"><source>Direct link</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_selectBy_link_label"><source>Select your background via direct link</source></trans-unit>
+
+			<trans-unit id="tx_tgm_reveal_contentElementWizard_title"><source>TgM-Reveal</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_contentElementWizard_description"><source>reveal.js-Presentation</source></trans-unit>
+
+			<trans-unit id="tx_tgm_reveal_bg_type"><source>Background type</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_type_none"><source>None</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_type_color"><source>Color</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_type_image"><source>Image</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_type_video"><source>Video</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_type_iframe"><source>iFrame</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_color"><source>Color (all CSS color formats are supported)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_image_size"><source>Image size (more informations: http://www.w3schools.com/cssref/playit.asp?filename=playcss_background-size)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_image_size_placeholder"><source>cover</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_image_position"><source>Position (more informations: http://www.w3schools.com/cssref/playit.asp?filename=playcss_background-position)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_image_position_placeholder"><source>center</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_image_repeat"><source>Repeat image</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_image_repeat_noRepeat"><source>no-repeat</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_image_repeat_repeatX"><source>repeat-x</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_image_repeat_repeatY"><source>repeat-y</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_image_repeat_repeat"><source>repeat</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_image_repeat_initial"><source>initial</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_image_repeat_inherit"><source>inherit</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_video_loop"><source>Infinite loop</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_video_muted"><source>Muted as default?</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_iframe"><source>iFrame (requires an url)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_notes"><source>Presentation notes (only visible to speaker; minifier extensions might crash the format)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_transition"><source>Transition (Overrides the global transition which is determined in your flexmform settings)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_transition_placeholder"><source>e.g. "none", "fade" or "slide"</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_state"><source>State (Your input will be applied as a class on the document element when that slide is opened)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_markdown"><source>Enable Markdown? (This will wrap the every content in a script tag; required for code snippets)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_trim"><source>Trim code? (If true, surrounding whitespace is automatically removed; syntax highlighting only)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_additional_attributes"><source>Additional "section"-tag-attributes (multiple arguments allowed; space-separated)</source></trans-unit>
+
+			<trans-unit id="tx_tgm_reveal_flexform_tab_options"><source>Options</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_controls"><source>Controls \n- Display controls in the bottom right corner</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_progress"><source>Progress \n- Display a presentation progress bar</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_slideNumber"><source>Slide Number \n- Display the page number of the current slide\n- "h" = horizontal, "v" = vertical, "c" = flattened slide number, "t" = total slides</source>
+			</trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_slideNumber_placeholder"><source>e.g. "h.v" (default), "h/v", "c" or "c/t" --- leave empty to disable</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_history"><source>History \n- Push each slide change to the browser history</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_keyboard"><source>Keyboard \n- Enable keyboard shortcuts for navigation</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_overview"><source>Overview \n- Enable the slide overview mode</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_center"><source>Center \n- Vertical centering of slides</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_touch"><source>Touch \n- Enables touch navigation on devices with touch input</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_loop"><source>Loop \n- Loop the presentation</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_rtl"><source>RTL \n- Change the presentation direction to be RTL (right-to-left)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_shuffle"><source>Shuffle \n- Randomizes the order of slides each time the presentation loads</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_fragments"><source>Fragments \n- Turns fragments on and off globally</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_embedded"><source>Embedded \n- Flags if the presentation is running in an embedded mode, i.e. contained within a limited portion of the screen</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_help"><source>Help \n- Flags if we should show a help overlay when the questionmark key is pressed</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_showNotes"><source>Show notes \n- Flags if speaker notes should be visible to all viewers</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_hideAddressBar"><source>Hide address bar \n- Hides the address bar on mobile devices</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_previewLinks"><source>Preview links \n- Opens links in an iframe preview overlay</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_viewDistance"><source>View distance \n- Number of slides away from the current that are visible</source></trans-unit>
+
+			<trans-unit id="tx_tgm_reveal_flexform_tab_presentation"><source>Presentation</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_theme"><source>Theme \n- predefined presentation themes</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_theme_beige"><source>Beige</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_theme_black"><source>Black</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_theme_blood"><source>Blood</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_theme_league"><source>League</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_theme_moon"><source>Moon</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_theme_night"><source>Night</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_theme_serif"><source>Serif</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_theme_simple"><source>Simple</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_theme_sky"><source>Sky</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_theme_solarized"><source>Solarized</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_theme_white"><source>White</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_transition"><source>Transition</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_transitionSpeed"><source>Transition speed</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_backgroundTransition"><source>Background Transition \n- Transition style for full page slide backgrounds</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_width"><source>Width \n- The "normal" width of the presentation, aspect ratio will be preserved when the presentation is scaled to fit different resolutions. Can be specified using percentage units.</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_height"><source>Height \n- The "normal" height of the presentation, aspect ratio will be preserved when the presentation is scaled to fit different resolutions. Can be specified using percentage units.</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_margin"><source>Margin \n- Factor of the display size that should remain empty around the content</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_minScale"><source>Min. scale \n- Bounds for smallest possible scale to apply to content</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_maxScale"><source>Max. scale \n- Bounds for largest possible scale to apply to content</source></trans-unit>
+
+			<trans-unit id="tx_tgm_reveal_flexform_tab_movement"><source>Movement</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_autoSlide">
+				<source>
+				Auto slide\n
+				- Number of milliseconds between automatically proceeding to the next slide\n
+				- disabled when set to 0\n
+				- this value can be overwritten by using a data-autoslide attribute on your slides
+				</source>
+			</trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_autoSlideStoppable"><source>Auto slide stoppable \n- Stop auto-sliding after user input</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_autoSlideMethod"><source>Auto slide method \n- Use this method for navigation when auto-sliding</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_mouseWheel"><source>Mouse wheel \n- Enable slide navigation via mouse wheel</source></trans-unit>
+
+			<trans-unit id="tx_tgm_reveal_flexform_tab_parallax"><source>Parallax</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_parallaxBackgroundImage"><source>Parallax background image (FAL version comming soon)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_parallaxBackgroundSize"><source>Parallax background size \n- CSS syntax (e.g. "2100px 900px")</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_parallaxBackgroundHorizontal"><source>Parallax background horizontal \n- Number of pixels to move the parallax background per slide \n- calculated automatically unless specified \n- set to 0 to disable movement along x axis</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_parallaxBackgroundVertical"><source>Parallax background vertical \n- Number of pixels to move the parallax background per slide \n- calculated automatically unless specified \n- set to 0 to disable movement along y axis</source></trans-unit>
+
+			<trans-unit id="tx_tgm_reveal_flexform_tab_plugins"><source>Plugins</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_plugins_user"><source>Insert your custom plugins... \n- "EXT_JS_DIR:" will replaced with "typo3conf/ext/tgm_reveal/Resources/Public/JavaScript/")</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_plugins_marked"><source>Markdown/Marked</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_plugins_markdown"><source>Markdown/Markdown</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_plugins_highlight"><source>Syntax hightlighting</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_plugins_zoom"><source>Zoom</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_plugins_notes"><source>Notes</source></trans-unit>
+
+			<trans-unit id="tx_tgm_reveal_flexform_tab_userFiles"><source>Custom CSS and JavaScript</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_userCSS"><source>Insert your custom CSS...</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_userJS"><source>Insert your custom JavaScript...</source></trans-unit>
+
+			<trans-unit id="tx_tgm_reveal_flexform_tab_other"><source>Other settings</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_enableFancybox"><source>Enable Fancybox \n- more informations here: http://fancyapps.com/fancybox/</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_disableBrowserZooming"><source>Disable browser zooming \n- proberly not working in every browser</source></trans-unit>
+		</body>
+	</file>
+</xliff>

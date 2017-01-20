@@ -1,0 +1,32 @@
+<style>
+	/* @formatter:off */
+	* {white-space: normal;}
+	.tgm_reveal-backendPreview {position: relative; min-width: 281px; top: -10px; padding: 0 20px; margin-top: 11px; background-color: #F9F9F9; border: 1px solid #D6D6D6; border-top: 37px solid #D0D0D0; border-radius: 2px;}
+	.tgm_reveal-backendPreview .flexform {color: #008000;}
+	/* @formatter:on */
+</style>
+<div class="tgm_reveal-backendPreview">
+	<h3 style="text-align:center;"><strong class="flexform">Some {extName} settings:</strong></h3>
+	<h4>Presentation:</h4>
+	<ul>
+		<li><strong>Theme: </strong>{preview.theme}</li>
+		<li><strong>Width: </strong>{preview.width}px</li>
+		<li><strong>Height: </strong>{preview.height}px</li>
+		<li><strong>Parallax background: </strong>{preview.parallax}</li>
+		<li><strong>Enable Fancybox: </strong>{preview.enableFancybox}</li>
+	</ul>
+	<h4>Movement:</h4>
+	<ul>
+		<li><strong>Transition: </strong>{preview.transition}</li>
+		<li><strong>Autoslide: </strong>{preview.autoSlide}</li>
+		<li><strong>Mousewheel: </strong>{preview.mouseWheel}</li>
+		<li><strong>Disable browser zooming: </strong>{preview.disableBrowserZooming}</li>
+	</ul>
+	<h4>Other:</h4>
+	<ul>
+		<li><strong>Custom CSS: </strong>{preview.customCSS}</li>
+		<li><strong>Custom JavaScript: </strong>{preview.customJavaScript}</li>
+		<li><strong>Main-Slides: </strong>{preview.mainPageCount}</li>
+		<li><strong>Sub-Slides: </strong>{preview.subPageCount}</li>
+	</ul>
+</div>

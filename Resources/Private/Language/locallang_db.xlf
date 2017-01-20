@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-11-23T16:23:12Z" product-name="tgm_reveal">
+		<header/>
+		<body>
+			<trans-unit id="tx_tgmreveal_domain_model_reveal"><source>Reveal</source></trans-unit>
+		</body>
+	</file>
+</xliff>

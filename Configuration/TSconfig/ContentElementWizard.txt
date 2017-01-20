@@ -1,0 +1,14 @@
+mod.wizards.newContentElement.wizardItems.plugins {
+	elements {
+		tgm_reveal {
+			iconIdentifier = ext-tgm_reveal-wizard-icon
+			title = LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_contentElementWizard_title
+			description = LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_contentElementWizard_description
+
+			tt_content_defValues {
+				CType = list
+				list_type = tgmreveal_reveal
+			}
+		}
+	}
+}

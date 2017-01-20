@@ -1,0 +1,8 @@
+<f:layout name="Default"/>
+<f:section name="main">
+	<div class="reveal" data-enableFancybox="{f:if(condition: '{settings.enableFancybox} == \'1\'', then: 'true', else: 'false')}">
+		<div class="slides">
+			<f:cObject typoscriptObjectPath="plugin.tx_tgmreveal_reveal.lib.pages"/>
+		</div>
+	</div>
+</f:section>

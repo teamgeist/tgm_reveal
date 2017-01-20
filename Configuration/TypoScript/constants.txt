@@ -1,0 +1,16 @@
+plugin.tx_tgmreveal_reveal {
+	view {
+		# cat=plugin.tx_tgmreveal_reveal/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:tgm_reveal/Resources/Private/Templates/
+		# cat=plugin.tx_tgmreveal_reveal/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:tgm_reveal/Resources/Private/Partials/
+		# cat=plugin.tx_tgmreveal_reveal/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:tgm_reveal/Resources/Private/Layouts/
+	}
+
+	persistence {
+		# cat=plugin.tx_tgmreveal_reveal//a; type=string; label=Default storage PID
+		storagePid =
+	}
+
+}

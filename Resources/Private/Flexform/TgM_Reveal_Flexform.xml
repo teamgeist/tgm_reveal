@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+    <sheets>
+        <general>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_tab_options</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.controls>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_controls</label>
+                            <config>
+                                <type>select</type>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.controls>
+                    <settings.progress>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_progress</label>
+                            <config>
+                                <type>select</type>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.progress>
+                    <settings.slideNumber>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_slideNumber</label>
+                            <config>
+                                <type>select</type>
+                                <default>h.v</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">h.v (default)</numIndex>
+                                        <numIndex index="1">h.v</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">h/v</numIndex>
+                                        <numIndex index="1">h/v</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">c</numIndex>
+                                        <numIndex index="1">c</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">c/t</numIndex>
+                                        <numIndex index="1">c/t</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.slideNumber>
+                    <settings.history>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_history</label>
+                            <config>
+                                <type>select</type>
+                                <default>0</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.history>
+                    <settings.keyboard>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_keyboard</label>
+                            <config>
+                                <type>select</type>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.keyboard>
+                    <settings.overview>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_overview</label>
+                            <config>
+                                <type>select</type>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.overview>
+                    <settings.center>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_center</label>
+                            <config>
+                                <type>select</type>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.center>
+                    <settings.touch>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_touch</label>
+                            <config>
+                                <type>select</type>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.touch>
+                    <settings.loop>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_loop</label>
+                            <config>
+                                <type>select</type>
+                                <default>0</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.loop>
+                    <settings.rtl>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_rtl</label>
+                            <config>
+                                <type>select</type>
+                                <default>0</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.rtl>
+                    <settings.shuffle>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_shuffle</label>
+                            <config>
+                                <type>select</type>
+                                <default>0</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.shuffle>
+                    <settings.fragments>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_fragments</label>
+                            <config>
+                                <type>select</type>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.fragments>
+                    <settings.embedded>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_embedded</label>
+                            <config>
+                                <type>select</type>
+                                <default>0</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.embedded>
+                    <settings.help>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_help</label>
+                            <config>
+                                <type>select</type>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.help>
+                    <settings.showNotes>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_showNotes</label>
+                            <config>
+                                <type>select</type>
+                                <default>0</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.showNotes>
+                    <settings.hideAddressBar>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_hideAddressBar</label>
+                            <config>
+                                <type>select</type>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.hideAddressBar>
+                    <settings.previewLinks>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_previewLinks</label>
+                            <config>
+                                <type>select</type>
+                                <default>0</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.previewLinks>
+                    <settings.viewDistance>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_viewDistance</label>
+                            <config>
+                                <type>input</type>
+                                <default>3</default>
+                                <placeholder>3</placeholder>
+                                <eval>trim,int</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.viewDistance>
+                </el>
+            </ROOT>
+        </general>
+        <presentation>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_tab_presentation</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.theme>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_theme</label>
+                            <config>
+                                <type>select</type>
+                                <default>black</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_theme_beige</numIndex>
+                                        <numIndex index="1">beige</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_theme_black</numIndex>
+                                        <numIndex index="1">black</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_theme_blood</numIndex>
+                                        <numIndex index="1">blood</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_theme_league</numIndex>
+                                        <numIndex index="1">league</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_theme_moon</numIndex>
+                                        <numIndex index="1">moon</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_theme_night</numIndex>
+                                        <numIndex index="1">night</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_theme_serif</numIndex>
+                                        <numIndex index="1">serif</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_theme_simple</numIndex>
+                                        <numIndex index="1">simple</numIndex>
+                                    </numIndex>
+                                    <numIndex index="8" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_theme_sky</numIndex>
+                                        <numIndex index="1">sky</numIndex>
+                                    </numIndex>
+                                    <numIndex index="9" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_theme_solarized</numIndex>
+                                        <numIndex index="1">solarized</numIndex>
+                                    </numIndex>
+                                    <numIndex index="10" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_theme_white</numIndex>
+                                        <numIndex index="1">white</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.theme>
+                    <settings.width>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_width</label>
+                            <config>
+                                <type>input</type>
+                                <default>960</default>
+                                <placeholder>960</placeholder>
+                                <eval>trim,int</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.width>
+                    <settings.height>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_height</label>
+                            <config>
+                                <type>input</type>
+                                <default>700</default>
+                                <placeholder>700</placeholder>
+                                <eval>trim,int</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.height>
+                    <settings.margin>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_margin</label>
+                            <config>
+                                <type>input</type>
+                                <eval>trim,double2</eval>
+                                <default>0.10</default>
+                                <range>
+                                    <lower>0.10</lower>
+                                    <upper>10</upper>
+                                </range>
+                                <wizards>
+                                    <margin>
+                                        <type>slider</type>
+                                        <step>0.1</step>
+                                        <width>350</width>
+                                    </margin>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.margin>
+                    <settings.minScale>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_minScale</label>
+                            <config>
+                                <type>input</type>
+                                <eval>trim,double2</eval>
+                                <default>0.20</default>
+                                <range>
+                                    <lower>0.10</lower>
+                                    <upper>4</upper>
+                                </range>
+                                <wizards>
+                                    <scale>
+                                        <type>slider</type>
+                                        <step>0.10</step>
+                                        <width>350</width>
+                                    </scale>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.minScale>
+                    <settings.maxScale>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_maxScale</label>
+                            <config>
+                                <type>input</type>
+                                <eval>trim,double2</eval>
+                                <default>1.5</default>
+                                <range>
+                                    <lower>0.10</lower>
+                                    <upper>5</upper>
+                                </range>
+                                <wizards>
+                                    <scale>
+                                        <type>slider</type>
+                                        <step>0.1</step>
+                                        <width>350</width>
+                                    </scale>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.maxScale>
+                </el>
+            </ROOT>
+        </presentation>
+        <movement>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_tab_movement</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.transition>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_transition</label>
+                            <config>
+                                <type>select</type>
+                                <default>default</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">None</numIndex>
+                                        <numIndex index="1">none</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Default</numIndex>
+                                        <numIndex index="1">default</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Fade</numIndex>
+                                        <numIndex index="1">fade</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">Slide</numIndex>
+                                        <numIndex index="1">slide</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">Convex</numIndex>
+                                        <numIndex index="1">convex</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">Concave</numIndex>
+                                        <numIndex index="1">concave</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">Zoom</numIndex>
+                                        <numIndex index="1">zoom</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.transition>
+                    <settings.transitionSpeed>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_transitionSpeed</label>
+                            <config>
+                                <type>select</type>
+                                <default>default</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">Default</numIndex>
+                                        <numIndex index="1">default</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Fast</numIndex>
+                                        <numIndex index="1">fast</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Slow</numIndex>
+                                        <numIndex index="1">slow</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.transitionSpeed>
+                    <settings.backgroundTransition>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_backgroundTransition</label>
+                            <config>
+                                <type>select</type>
+                                <default>default</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">None</numIndex>
+                                        <numIndex index="1">none</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">Default</numIndex>
+                                        <numIndex index="1">default</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">Fade</numIndex>
+                                        <numIndex index="1">fade</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">Slide</numIndex>
+                                        <numIndex index="1">slide</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">Convex</numIndex>
+                                        <numIndex index="1">convex</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">Concave</numIndex>
+                                        <numIndex index="1">concave</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">Zoom</numIndex>
+                                        <numIndex index="1">zoom</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.backgroundTransition>
+                    <settings.autoSlide>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_autoSlide</label>
+                            <config>
+                                <type>input</type>
+                                <default>0</default>
+                                <placeholder>0</placeholder>
+                                <eval>trim,int</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.autoSlide>
+                    <settings.autoSlideStoppable>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_autoSlideStoppable</label>
+                            <config>
+                                <type>select</type>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.autoSlideStoppable>
+                    <settings.autoSlideMethod>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_autoSlideMethod</label>
+                            <config>
+                                <type>input</type>
+                                <default>Reveal.navigateNext</default>
+                                <placeholder>Reveal.navigateNext</placeholder>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.autoSlideMethod>
+                    <settings.mouseWheel>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_mouseWheel</label>
+                            <config>
+                                <type>select</type>
+                                <default>0</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.mouseWheel>
+                </el>
+            </ROOT>
+        </movement>
+        <parallax>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_tab_parallax</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.parallaxBackgroundImage>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_parallaxBackgroundImage</label>
+                            <config>
+                                <type>input</type>
+                                <eval>trim,nospace</eval>
+                                <softref>typolink</softref>
+                                <wizards>
+                                    <link>
+                                        <type>popup</type>
+                                        <icon>link_popup.gif</icon>
+                                        <JSopenParams>height=600,width=550,status=0,menubar=0,scrollbars=1</JSopenParams>
+                                        <params>
+                                            <!--
+                                                Allow 'file' in future versions.
+                                                Currently it's disable cause of 'allowedExtensions' fails and 'file:41'- (or whatever) conversion to link
+                                            -->
+                                            <blindLinkOptions>page,file,folder,mail</blindLinkOptions>
+                                            <blindLinkFields>class,target,title,params</blindLinkFields>
+                                            <allowedExtensions>gif,jpg,jpeg,png</allowedExtensions>
+                                        </params>
+                                        <module>
+                                            <name>wizard_element_browser</name>
+                                            <urlParameters>
+                                                <mode>wizard</mode>
+                                            </urlParameters>
+                                        </module>
+                                    </link>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.parallaxBackgroundImage>
+                    <settings.parallaxBackgroundSize>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_parallaxBackgroundSize</label>
+                            <config>
+                                <type>input</type>
+                                <placeholder>2100px 900px</placeholder>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.parallaxBackgroundSize>
+                    <settings.parallaxBackgroundHorizontal>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_parallaxBackgroundHorizontal</label>
+                            <config>
+                                <type>input</type>
+                                <eval>trim,int</eval>
+                                <default>0</default>
+                                <range>
+                                    <lower>0</lower>
+                                    <upper>250</upper>
+                                </range>
+                                <wizards>
+                                    <margin>
+                                        <type>slider</type>
+                                        <step>1</step>
+                                        <width>350</width>
+                                    </margin>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.parallaxBackgroundHorizontal>
+                    <settings.parallaxBackgroundVertical>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_parallaxBackgroundVertical</label>
+                            <config>
+                                <type>input</type>
+                                <eval>trim,int</eval>
+                                <default>0</default>
+                                <range>
+                                    <lower>0</lower>
+                                    <upper>250</upper>
+                                </range>
+                                <wizards>
+                                    <margin>
+                                        <type>slider</type>
+                                        <step>1</step>
+                                        <width>350</width>
+                                    </margin>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.parallaxBackgroundVertical>
+                </el>
+            </ROOT>
+        </parallax>
+        <plugins>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_tab_plugins</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.userPlugins>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_plugins_user</label>
+                            <config>
+                                <type>text</type>
+                                <renderType>t3editor</renderType>
+                                <format>javascript</format>
+                                <rows>14</rows>
+                                <!-- @formatter:off -->
+                                <default>
+dependencies: [
+    /* Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/ */
+    { src: 'EXT_JS_DIR:lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+    /* Interpret Markdown in &lt;section&gt; elements */
+    { src: 'EXT_JS_DIR:plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'EXT_JS_DIR:plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+    /* Syntax highlight for &lt;code&gt; elements */
+    { src: 'EXT_JS_DIR:plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+    /* Zoom in and out with Alt+click */
+    { src: 'EXT_JS_DIR:plugin/zoom-js/zoom.js', async: true },
+
+    /* Speaker notes */
+    { src: 'EXT_JS_DIR:plugin/notes/notes.js', async: true },
+
+    /* MathJax */
+    { src: 'EXT_JS_DIR:plugin/math/math.js', async: true }
+]
+                                </default>
+                                <!-- @formatter:on -->
+                            </config>
+                        </TCEforms>
+                    </settings.userPlugins>
+                </el>
+            </ROOT>
+        </plugins>
+        <userFiles>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_tab_userFiles</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.userCSS>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_userCSS</label>
+                            <config>
+                                <type>text</type>
+                                <renderType>t3editor</renderType>
+                                <rows>15</rows>
+                                <format>css</format>
+                            </config>
+                        </TCEforms>
+                    </settings.userCSS>
+                    <settings.userJS>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_userJS</label>
+                            <config>
+                                <type>text</type>
+                                <renderType>t3editor</renderType>
+                                <rows>15</rows>
+                                <format>javascript</format>
+                            </config>
+                        </TCEforms>
+                    </settings.userJS>
+                </el>
+            </ROOT>
+        </userFiles>
+        <other>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_tab_other</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.enableFancybox>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_enableFancybox</label>
+                            <config>
+                                <type>select</type>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.enableFancybox>
+                    <settings.disableBrowserZooming>
+                        <TCEforms>
+                            <label>LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_flexform_disableBrowserZooming</label>
+                            <config>
+                                <type>select</type>
+                                <default>1</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:tgm_reveal/Resources/Private/Language/locallang.xlf:tx_tgm_reveal_no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.disableBrowserZooming>
+                </el>
+            </ROOT>
+        </other>
+    </sheets>
+</T3DataStructure>
