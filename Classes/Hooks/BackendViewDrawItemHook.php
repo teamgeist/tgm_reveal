@@ -23,7 +23,6 @@ class BackendViewDrawItemHook implements PageLayoutViewDrawItemHookInterface {
 	public function preProcess(PageLayoutView &$parentObject, &$drawItem, &$headerContent, &$itemContent, array &$row) {
 		/**
 		 * Iterates every content element on the page and modifies elements with ctype 'list'
-		 * TODO: Replace CType 'list' with 'tgm_reveal'
 		 */
 		if($row['CType'] !== 'list' && $row['list_type'] !== 'tgmreveal_reveal') return;
 

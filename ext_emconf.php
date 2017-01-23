@@ -6,7 +6,7 @@
  * - modified some themes (changed font-path)
  */
 $EM_CONF[$_EXTKEY] = [
-	'title' => 'TgM-reveal.js',
+	'title' => 'Reveal.js for TYPO3',
 	'description' => 'A TYPO3-Extension for the jQuery-plugin "reveal.js".',
 	'category' => 'plugin',
 	'author' => 'EG',
@@ -16,9 +16,12 @@ $EM_CONF[$_EXTKEY] = [
 	'uploadfolder' => '0',
 	'createDirs' => 'fileadmin/ext/tgm_reveal',
 	'clearCacheOnLoad' => 0,
-	'version' => '1.0.0',
+	'version' => '1.0.1',
 	'constraints' => [
-		'depends' => ['typo3' => '7.6.0-7.6.99'],
+		'depends' => [
+			'php' => '7.0.0',
+			'typo3' => '7.6.0-7.6.99'
+		],
 		'conflicts' => [],
 		'suggests' => []
 	]

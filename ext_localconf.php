@@ -30,7 +30,5 @@ if(TYPO3_MODE === 'BE') {
 
 /**
  * Adds a hook for the preview of the content element (tgm_reveal-plugin) in the backend
- *
- * TODO: Implement own cType instead of using 'list'
  */
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['list'] = TgM\TgmReveal\Hooks\BackendViewDrawItemHook::class;
