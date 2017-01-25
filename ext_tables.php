@@ -10,7 +10,7 @@ if(!defined('TYPO3_MODE')) {
 $flexform = strtolower(TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY)) . '_reveal';
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$flexform] = 'layout,select_key,pages';
 $TCA['tt_content']['types']['list']['subtypes_addlist'][$flexform] = 'pi_flexform';
-TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($flexform, 'FILE:EXT:' . $_EXTKEY . '/Resources/Private/Flexform/TgM_GammaGallery_Flexform.xml');
+TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($flexform, 'FILE:EXT:' . $_EXTKEY . '/Resources/Private/Flexform/TgM_Reveal_Flexform.xml');
 
 /**
  * Registeres a new plugin
