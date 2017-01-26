@@ -1,7 +1,7 @@
 <?php
 
 /**
- * - reveal.js-Version: 3.4.0 (10.01.2017)
+ * - reveal.js-Version: 3.4.1 (25.01.2017)
  * - modified file "tgm_reveal/Resources/Public/JavaScript/plugin/notes/notes.html and implemented a "white-space"-css fix (does not work with source-minifier)
  * - modified some themes (changed font-path)
  */
