@@ -14,7 +14,7 @@ $(document).ready(function() {
  * Enables Fancybox if required after all images has been loaded
  * TODO: Prevent Fancybox gallery with every image in the presentation (for current slide only).
  */
-$(window).load(function() {
+$(window).on('load', function() {
 	if($('.reveal').attr('data-enableFancybox') == 'true') {
 		$('img').each(function() {
 			$(this).wrap('<a class="fancybox" rel="fb-group" href="' + $(this).attr('src') + '"></a>');
