@@ -7,7 +7,9 @@ plugin.tx_tgmreveal_reveal {
 			special.value.data = page:uid
 			# Includes hidden pages
 			includeNotInMenu = 1
-			entryLevel = 1
+			# "special.value.data" defines the 'new' root-page. "entryLevel = 0" starts at this page
+			entryLevel = 0
+
 			1 = TMENU
 			1 {
 				# Expands all sub pages of the current menu layer

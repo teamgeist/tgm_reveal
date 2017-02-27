@@ -4,7 +4,9 @@ namespace TgM\TgmReveal\Hooks;
 use TgM\TgmReveal\Controller\RevealController;
 use TYPO3\CMS\Backend\View\PageLayoutView;
 use TYPO3\CMS\Backend\View\PageLayoutViewDrawItemHookInterface;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * Hook to render the preview of custom content elements in the backend
@@ -22,9 +24,9 @@ class BackendViewDrawItemHook implements PageLayoutViewDrawItemHookInterface {
 	 */
 	public function preProcess(PageLayoutView &$parentObject, &$drawItem, &$headerContent, &$itemContent, array &$row) {
 		/**
-		 * Iterates every content element on the page and modifies elements with ctype 'list'
+		 * Iterates every content element on the page and modifies elements with ctype 'list' and listtype 'tgm_reveal_reveal'
 		 */
-		if($row['CType'] !== 'list' && $row['list_type'] !== 'tgmreveal_reveal') return;
+		if(!($row['CType'] === 'list' && $row['list_type'] === 'tgmreveal_reveal')) return;
 
 		$drawItem = false;
 		$headerContent = '<strong>TgM-Reveal</strong><br/>';
@@ -82,6 +84,10 @@ class BackendViewDrawItemHook implements PageLayoutViewDrawItemHookInterface {
 		$pageStatistics = $this->countPagesAndSubPages();
 		$bePreview['mainPageCount'] = $pageStatistics['mainPageCount'];
 		$bePreview['subPageCount'] = $pageStatistics['subPageCount'];
+
+		$emConf = $this->getEmConf();
+		$bePreview['extVersion'] = $emConf['version'];
+		$bePreview['extDescription'] = $emConf['description'];
 	}
 
 	/**
@@ -108,11 +114,6 @@ class BackendViewDrawItemHook implements PageLayoutViewDrawItemHookInterface {
 			 * If there's no sub-page, continue
 			 */
 			if(count($subPages) === 0) continue;
-
-			/**
-			 * Removes the first sub-page (it's already count as main-page)
-			 */
-			array_shift($subPages);
 
 			/**
 			 * Counts the sub pages
@@ -184,5 +185,16 @@ class BackendViewDrawItemHook implements PageLayoutViewDrawItemHookInterface {
 	 */
 	private function hasLengthAsString(string $value): string {
 		return strlen(trim($value)) > 0 ? 'true' : 'false';
+	}
+
+	/**
+	 * Returns the extension configuration settings as an array.
+	 *
+	 * @return mixed array
+	 */
+	private function getEmConf() {
+		include ExtensionManagementUtility::extPath(RevealController::EXT_KEY) . 'ext_emconf.php';
+		/** @noinspection PhpUndefinedVariableInspection */
+		return $EM_CONF[RevealController::EXT_KEY];
 	}
 }

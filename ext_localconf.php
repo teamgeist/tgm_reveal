@@ -22,6 +22,8 @@ ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:E
  */
 if(TYPO3_MODE === 'BE') {
 	$icons = ['ext-tgm_reveal-wizard-icon' => 'plugin_wizard.png'];
+
+	/** @var IconRegistry $iconRegistry */
 	$iconRegistry = GeneralUtility::makeInstance(IconRegistry::class);
 	foreach ($icons as $identifier => $path) {
 		$iconRegistry->registerIcon($identifier, BitmapIconProvider::class, ['source' => 'EXT:' . RevealController::EXT_KEY . '/Resources/Public/Icons/' . $path]);

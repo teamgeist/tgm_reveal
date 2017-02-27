@@ -4,7 +4,7 @@
 
 $(document).ready(function() {
 	/**
-	 * Clears the body-tag and re-adds the reveal-container
+	 * Stores the reveal-container temporarily, and re-adds it after clearing the body-tag
 	 */
 	var revealInit = $('.reveal');
 	$('body').empty().append(revealInit);

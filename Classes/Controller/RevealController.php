@@ -77,7 +77,6 @@ class RevealController extends ActionController {
 		$reveals = $this->revealRepository->findAll();
 		$this->view->assign('reveals', $reveals);
 		$this->includeCSSAndJSFiles();
-		$GLOBALS['TSFE']->additionalFooterData['tx_tgm_reveal_js_init'] = $this->buildScript();
 	}
 
 	/**
@@ -115,14 +114,15 @@ class RevealController extends ActionController {
 		$this->includeOtherFilesIfRequired($extFilePath . 'JavaScript/', $cssFileArray, $jsFileArray);
 
 		/**
-		 * Adds the <link>-tags to the end of the <header>-tag
+		 * Adds required <link>-tags at the end of the <header>-tag
 		 */
-		$GLOBALS['TSFE']->additionalHeaderData['tx_tgmreveal'] = $this->buildSourceTag($cssFileArray, '<link rel="stylesheet" href="%s" media="all"> ');;
+		$GLOBALS['TSFE']->additionalHeaderData[self::EXT_KEY] = $this->buildSourceTag($cssFileArray, '<link rel="stylesheet" href="%s" media="all"> ');;
 
 		/**
-		 * Adds the <source>-tags to the end of the <body>-tag
+		 * Adds required <source>-tags (and "reveal.js" initialisation script) at the end of the <body>-tag
 		 */
-		$GLOBALS['TSFE']->additionalFooterData['tx_tgmreveal'] = $this->buildSourceTag($jsFileArray, '<script type="text/javascript" src="%s"></script> ');
+		$jsFiles = $this->buildSourceTag($jsFileArray, '<script type="text/javascript" src="%s"></script> ');
+		$GLOBALS['TSFE']->additionalFooterData[self::EXT_KEY] = $jsFiles . $this->buildScript();
 	}
 
 	/**
@@ -251,12 +251,12 @@ class RevealController extends ActionController {
 		/**
 		 * Page id's are used for multiple reveal-presentations to handle presenatation-based overrides
 		 */
-		$userFile = 'fileadmin/ext/' . self::EXT_KEY . '/pid' . $GLOBALS['TSFE']->id . "_" . $fileName;
+		$userFile = 'fileadmin/ext/' . self::EXT_KEY . '/pid' . $GLOBALS['TSFE']->id . '_' . $fileName;
 
 		/**
 		 * Fetches the text which is currently stored and the flexform text
 		 */
-		$fileText = file_exists($userFile) ? file_get_contents($userFile) : "";
+		$fileText = file_exists($userFile) ? file_get_contents($userFile) : '';
 
 		/**
 		 * Removes surrounding spaces

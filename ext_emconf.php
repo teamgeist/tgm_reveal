@@ -5,8 +5,8 @@
  * - modified file "tgm_reveal/Resources/Public/JavaScript/plugin/notes/notes.html and implemented a "white-space"-css fix (does not work with source-minifier)
  * - modified some themes (changed font-path)
  */
-$EM_CONF[$_EXTKEY] = [
-	'title' => 'Reveal.js for TYPO3',
+$EM_CONF['tgm_reveal'] = [
+	'title' => 'reveal.js for TYPO3',
 	'description' => 'A TYPO3-Extension for the jQuery-plugin "reveal.js".',
 	'category' => 'plugin',
 	'author' => 'EG',

@@ -1,12 +1,17 @@
 <style>
 	/* @formatter:off */
-	* {white-space: normal;}
+	.tgm_reveal-backendPreview * {white-space: normal;}
+	.tgm_reveal-backendPreview h3 {text-align: center;}
 	.tgm_reveal-backendPreview {position: relative; min-width: 281px; top: -10px; padding: 0 20px; margin-top: 11px; background-color: #F9F9F9; border: 1px solid #D6D6D6; border-top: 37px solid #D0D0D0; border-radius: 2px;}
 	.tgm_reveal-backendPreview .flexform {color: #008000;}
+	.tgm_reveal-backendPreview .tgm_reveal-extDemo {padding: 8px; background-color: #D6D6D6;}
+	.tgm_reveal-backendPreview .tgm_reveal-extDemo .tgm_reveal-extLinks {color: #1B6FC4;}
+	.tgm_reveal-backendPreview .tgm_reveal-extDemo .tgm_reveal-extLinks:hover {text-decoration: underline;}
+	.tgm_reveal-backendPreview .tgm_reveal-extDemo .float-right {float: right;}
 	/* @formatter:on */
 </style>
 <div class="tgm_reveal-backendPreview">
-	<h3 style="text-align:center;"><strong class="flexform">Some {extName} settings:</strong></h3>
+	<h3><strong class="flexform">Some {extName} settings:</strong></h3>
 	<h4>Presentation:</h4>
 	<ul>
 		<li><strong>Theme: </strong>{preview.theme}</li>
@@ -29,4 +34,6 @@
 		<li><strong>Main-Slides: </strong>{preview.mainPageCount}</li>
 		<li><strong>Sub-Slides: </strong>{preview.subPageCount}</li>
 	</ul>
+	<br/>
+	<p class="tgm_reveal-extDemo">"tgm_reveal" v.{preview.extVersion} - Check out our <a class="tgm_reveal-extLinks" href="http://demo.teamgeist-medien.de/tgm-reveal-presentation.html" target="_blank">extension demo</a>. <a class="tgm_reveal-extLinks float-right" href="http://lab.hakim.se/reveal-js/#/" target="_blank">{preview.extDescription}</a></p>
 </div>
