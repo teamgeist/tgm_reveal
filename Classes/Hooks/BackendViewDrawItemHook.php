@@ -1,12 +1,36 @@
 <?php
+
 namespace TgM\TgmReveal\Hooks;
 
+/***************************************************************
+ *
+ *  Copyright notice
+ *
+ *  (c) 2017 EG <eg@teamgeist-medien.de>, Teamgeist Medien
+ *
+ *  All rights reserved
+ *
+ *  This script is part of the TYPO3 project. The TYPO3 project is
+ *  free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  The GNU General Public License can be found at
+ *  http://www.gnu.org/copyleft/gpl.html.
+ *
+ *  This script is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
 use TgM\TgmReveal\Controller\RevealController;
 use TYPO3\CMS\Backend\View\PageLayoutView;
 use TYPO3\CMS\Backend\View\PageLayoutViewDrawItemHookInterface;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * Hook to render the preview of custom content elements in the backend
@@ -17,12 +41,14 @@ class BackendViewDrawItemHook implements PageLayoutViewDrawItemHookInterface {
 	 * Rendering
 	 *
 	 * @param PageLayoutView $parentObject
-	 * @param bool           $drawItem
-	 * @param string         $headerContent
-	 * @param string         $itemContent
-	 * @param array          $row
+	 * @param bool $drawItem
+	 * @param string $headerContent
+	 * @param string $itemContent
+	 * @param array $row
 	 */
 	public function preProcess(PageLayoutView &$parentObject, &$drawItem, &$headerContent, &$itemContent, array &$row) {
+		include_once ExtensionManagementUtility::extPath(RevealController::EXT_KEY) . 'Classes/TgMUtility.php';
+
 		/**
 		 * Iterates every content element on the page and modifies elements with ctype 'list' and listtype 'tgm_reveal_reveal'
 		 */
@@ -39,7 +65,7 @@ class BackendViewDrawItemHook implements PageLayoutViewDrawItemHookInterface {
 		/**
 		 * Fetches all Flexform settings and filters specific
 		 */
-		$flexform = $this->cleanUpArray(GeneralUtility::xml2array($row['pi_flexform']), ['data', 'sDEF', 'lDEF', 'vDEF']);
+		$flexform = \TgMUtility::cleanUpArray(GeneralUtility::xml2array($row['pi_flexform']), ['data', 'sDEF', 'lDEF', 'vDEF']);
 		$this->filterFlexformSettings($settings['bePreview'], $flexform);
 
 		/**
@@ -66,28 +92,15 @@ class BackendViewDrawItemHook implements PageLayoutViewDrawItemHookInterface {
 	 * @internal param array $cleanUpArray
 	 */
 	private function filterFlexformSettings(array &$bePreview, array $flexform) {
-		$bePreview['width'] = $flexform['presentation']['settings.width'];
-		$bePreview['height'] = $flexform['presentation']['settings.height'];
+		$bePreview['General']['settings'] = $this->getGeneralPreviewSettings($flexform['general']);
+		$bePreview['Presentation']['settings'] = $this->getPresentationPreviewSettings($flexform['presentation']);
+		$bePreview['Movement']['settings'] = $this->getMovementPreviewSettings($flexform['movement']);
+		$bePreview['Parallax']['settings'] = $this->getParallaxPreviewSettings($flexform['parallax']);
+		$bePreview['Other']['settings'] = $this->getOtherPreviewSettings(['userFiles' => $flexform['userFiles'], 'other' => $flexform['other']]);
 
-		$bePreview['theme'] = ucfirst($flexform['presentation']['settings.theme']);
-		$bePreview['transition'] = ucfirst($flexform['movement']['settings.transition']);
-
-		$bePreview['parallax'] = $this->hasLengthAsString($flexform['parallax']['settings.parallaxBackgroundImage']);
-		$bePreview['customCSS'] = $this->hasLengthAsString($flexform['userFiles']['settings.userCSS']);
-		$bePreview['customJavaScript'] = $this->hasLengthAsString($flexform['userFiles']['settings.userJS']);
-
-		$bePreview['autoSlide'] = $this->intStringAsBooleanString($flexform['movement']['settings.autoSlide']);
-		$bePreview['mouseWheel'] = $this->intStringAsBooleanString($flexform['movement']['settings.mouseWheel']);
-		$bePreview['enableFancybox'] = $this->intStringAsBooleanString($flexform['other']['settings.enableFancybox']);
-		$bePreview['disableBrowserZooming'] = $this->intStringAsBooleanString($flexform['other']['settings.disableBrowserZooming']);
-
-		$pageStatistics = $this->countPagesAndSubPages();
-		$bePreview['mainPageCount'] = $pageStatistics['mainPageCount'];
-		$bePreview['subPageCount'] = $pageStatistics['subPageCount'];
-
-		$emConf = $this->getEmConf();
-		$bePreview['extVersion'] = $emConf['version'];
-		$bePreview['extDescription'] = $emConf['description'];
+		$emConf = \TgMUtility::getEmConf();
+		$bePreview['emConf']['extVersion'] = $emConf['version'];
+		$bePreview['emConf']['extDescription'] = $emConf['description'];
 	}
 
 	/**
@@ -102,10 +115,10 @@ class BackendViewDrawItemHook implements PageLayoutViewDrawItemHookInterface {
 		 * Counts all sub-pages (including the starting page-id itself)
 		 * $_GET['id'] = current page
 		 */
-		$mainPages = $this->countPages($_GET['id'], 1);
+		$mainPages = \TgMUtility::countPages($_GET['id'], 1);
 		$subPageCount = 0;
 		foreach ($mainPages as $mainPageId) {
-			$subPages = $this->countPages($mainPageId, 1);
+			$subPages = \TgMUtility::countPages($mainPageId, 1);
 			/**
 			 * Removes the first value because It's the $mainPageId itself
 			 */
@@ -131,70 +144,97 @@ class BackendViewDrawItemHook implements PageLayoutViewDrawItemHookInterface {
 	}
 
 	/**
-	 * Removes specific keys from the given array and moves their values to parent
-	 *
-	 * @param array $cleanUpArray The array to clean up
-	 * @param array $notAllowed Forbidden keys which should removed
-	 *
-	 * @return array The cleaned array
+	 * Collects general settings.
+	 * @param array $settings The array from flexform.
+	 * @return array The final array to print it's values in the preview.
 	 */
-	private function cleanUpArray(array $cleanUpArray, array $notAllowed) {
-		$cleanArray = [];
-		foreach ($cleanUpArray as $key => $value) {
-			if(in_array($key, $notAllowed)) {
-				return is_array($value) ? self::cleanUpArray($value, $notAllowed) : $value;
-			} else if(is_array($value)) {
-				$cleanArray[$key] = self::cleanUpArray($value, $notAllowed);
-			}
-		}
-		return $cleanArray;
+	private function getGeneralPreviewSettings(array $settings): array {
+		$general = [];
+		$general['Controls'] = \TgMUtility::intStringAsBooleanString($settings['settings.controls']);
+		$general['Progress'] = \TgMUtility::intStringAsBooleanString($settings['settings.progress']);
+
+		$general['Slide Number'] = $settings['settings.slideNumber'];
+
+		$general['History'] = \TgMUtility::intStringAsBooleanString($settings['settings.history']);
+		$general['Keyboard'] = \TgMUtility::intStringAsBooleanString($settings['settings.keyboard']);
+		$general['Overview'] = \TgMUtility::intStringAsBooleanString($settings['settings.overview']);
+		$general['Center'] = \TgMUtility::intStringAsBooleanString($settings['settings.center']);
+		$general['Touch'] = \TgMUtility::intStringAsBooleanString($settings['settings.touch']);
+		$general['Loop'] = \TgMUtility::intStringAsBooleanString($settings['settings.loop']);
+
+		$general['RTL'] = \TgMUtility::intStringAsBooleanString($settings['settings.rtl']);
+		$general['Shuffle'] = \TgMUtility::intStringAsBooleanString($settings['settings.shuffle']);
+		$general['Fragments'] = \TgMUtility::intStringAsBooleanString($settings['settings.fragments']);
+		$general['Embedded'] = \TgMUtility::intStringAsBooleanString($settings['settings.embedded']);
+		$general['Help'] = \TgMUtility::intStringAsBooleanString($settings['settings.help']);
+		$general['Show Notes'] = \TgMUtility::intStringAsBooleanString($settings['settings.showNotes']);
+		$general['Hide address bar'] = \TgMUtility::intStringAsBooleanString($settings['settings.hideAddressBar']);
+		$general['Preview links'] = \TgMUtility::intStringAsBooleanString($settings['settings.previewLinks']);
+		$general['View distance'] = $settings['settings.viewDistance'];
+		return $general;
 	}
 
 	/**
-	 * Fetches a list of all child pid's from the starting page id
-	 *
-	 * @param int $startPid The pid where counting starts
-	 * @param int $depth The depth of child-pages
-	 * @param int $begin The depth to begin
-	 *
-	 * @return array Returns an array which contains every page found. The starting page was removed via array_shift
+	 * Collects preview settings.
+	 * @param array $settings The array from flexform.
+	 * @return array The final array to print it's values in the preview.
 	 */
-	private function countPages(int $startPid, int $depth = 10, int $begin = 0): array {
-		$foundPages = explode(',', GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Database\\QueryGenerator')->getTreeList($startPid, $depth, $begin, 1));
-		array_shift($foundPages);
-		return $foundPages;
+	private function getPresentationPreviewSettings(array $settings): array {
+		$presentation = [];
+		$presentation['Theme'] = ucfirst($settings['settings.theme']);
+		$presentation['Width'] = $settings['settings.width'] . 'px';
+		$presentation['Height'] = $settings['settings.height'] . 'px';
+		$presentation['Margin'] = $settings['settings.margin'];
+		$presentation['Min. Scale'] = $settings['settings.minScale'];
+		$presentation['Max. Scale'] = $settings['settings.maxScale'];
+		return $presentation;
 	}
 
 	/**
-	 * Converts an int-value as string like '0' or '1' to a boolean-value as string
-	 *
-	 * @param string $booleanValue The int-value
-	 *
-	 * @return string A boolean-value as string
+	 * Collects movement settings.
+	 * @param array $settings The array from flexform.
+	 * @return array The final array to print it's values in the preview.
 	 */
-	private function intStringAsBooleanString(string $booleanValue): string {
-		return $booleanValue === '1' ? 'true' : 'false';
+	private function getMovementPreviewSettings(array $settings): array {
+		$movement = [];
+		$movement['Transition'] = ucfirst($settings['settings.transition']);
+		$movement['Transition speed'] = ucfirst($settings['settings.transitionSpeed']);
+		$movement['Background Transition'] = ucfirst($settings['settings.backgroundTransition']);
+		$movement['Auto slide'] = $settings['settings.autoSlide'];
+		$movement['Auto slide stoppable'] = \TgMUtility::intStringAsBooleanString($settings['settings.autoSlideStoppable']);
+		$movement['Auto slide method'] = $settings['settings.autoSlideMethod'];
+		$movement['Mouse wheel'] = \TgMUtility::intStringAsBooleanString($settings['settings.mouseWheel']);
+		return $movement;
 	}
 
 	/**
-	 * Returns a boolean as string if the given value has a length greater than 0
-	 *
-	 * @param string $value The value to check
-	 *
-	 * @return string A boolean-value as string
+	 * Collects parallax settings.
+	 * @param array $settings The array from flexform.
+	 * @return array The final array to print it's values in the preview.
 	 */
-	private function hasLengthAsString(string $value): string {
-		return strlen(trim($value)) > 0 ? 'true' : 'false';
+	private function getParallaxPreviewSettings(array $settings): array {
+		$parallax = [];
+		$parallax['Parallax background image'] = $settings['settings.parallaxBackgroundImage'];
+		$parallax['Parallax background size'] = $settings['settings.parallaxBackgroundSize'];
+		$parallax['Parallax background horizontal'] = $settings['settings.parallaxBackgroundHorizontal'];
+		$parallax['Parallax background vertical'] = $settings['settings.parallaxBackgroundVertical'];
+		return $parallax;
 	}
 
 	/**
-	 * Returns the extension configuration settings as an array.
-	 *
-	 * @return mixed array
+	 * Collects other settings.
+	 * @param array $settings The array from flexform.
+	 * @return array The final array to print it's values in the preview.
 	 */
-	private function getEmConf() {
-		include ExtensionManagementUtility::extPath(RevealController::EXT_KEY) . 'ext_emconf.php';
-		/** @noinspection PhpUndefinedVariableInspection */
-		return $EM_CONF[RevealController::EXT_KEY];
+	private function getOtherPreviewSettings(array $settings): array {
+		$other['Custom CSS'] = \TgMUtility::hasLengthAsString($settings['userFiles']['settings.userCSS']);
+		$other['Custom JavaScript'] = \TgMUtility::hasLengthAsString($settings['userFiles']['settings.userJS']);
+		$other['Enable Fancybox'] = \TgMUtility::intStringAsBooleanString($settings['other']['settings.enableFancybox']);
+		$other['Disable browser zooming'] = \TgMUtility::intStringAsBooleanString($settings['other']['settings.disableBrowserZooming']);
+
+		$pageStatistics = $this->countPagesAndSubPages();
+		$other['Main pages'] = $pageStatistics['mainPageCount'];
+		$other['Sub pages'] = $pageStatistics['subPageCount'];
+		return $other;
 	}
 }
