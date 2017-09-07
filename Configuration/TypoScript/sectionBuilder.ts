@@ -24,7 +24,7 @@ plugin.tx_tgmreveal_reveal {
 						table = tt_content
 						select {
 							pidInList.field = uid
-							andWhere = colPos=0
+                            where = ( colPos=0 AND colPos <> '-1')
 						}
 					}
 
