@@ -1,5 +1,5 @@
 {
-  "name": "ipf/tgm-reveal",
+  "name": "teamgeist/tgm-reveal",
   "description": "Reveal.js package for TYPO3",
   "type": "typo3-cms-extension",
   "license": [
@@ -7,17 +7,16 @@
   ],
   "authors": [
     {
-      "name": "Ingo Pfennigstorf",
-      "email": "i.pfennigstorf@gmail.com"
-    },
-    {
       "name": "EG",
       "email": "eg@teamgeist-medien.de"
+    },
+    {
+      "name": "Ingo Pfennigstorf",
+      "email": "i.pfennigstorf@gmail.com"
     }
   ],
   "require": {
-    "typo3/cms-core": "^8.7.13",
-    "components/revealjs": "^3.6"
+    "typo3/cms-core": "^8.7.13"
   },
   "autoload": {
     "psr-4": {
