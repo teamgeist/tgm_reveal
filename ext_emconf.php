@@ -17,7 +17,7 @@ $EM_CONF['tgm_reveal'] = [
     'version' => '1.1.0',
     'constraints' => [
         'depends' => [
-            'php' => '7.0.0',
+            'php' => '7.0.0-7.2.99',
             'typo3' => '7.6.0-8.7.99',
         ],
         'conflicts' => [],
