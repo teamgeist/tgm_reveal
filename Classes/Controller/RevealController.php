@@ -37,11 +37,6 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 class RevealController extends ActionController
 {
     /**
-     * The extension key.
-     */
-    const EXT_KEY = 'tgm_reveal';
-
-    /**
      * revealRepository.
      *
      * @var \TgM\TgmReveal\Domain\Repository\RevealRepository
@@ -124,13 +119,13 @@ class RevealController extends ActionController
         /*
          * Adds required <link>-tags at the end of the <header>-tag
          */
-        $GLOBALS['TSFE']->additionalHeaderData[self::EXT_KEY] = TgMUtility::buildSourceTag($cssFileArray, '<link rel="stylesheet" href="%s" media="all"> ');
+        $GLOBALS['TSFE']->additionalHeaderData['tgm_reveal'] = TgMUtility::buildSourceTag($cssFileArray, '<link rel="stylesheet" href="%s" media="all"> ');
 
         /**
          * Adds required <source>-tags (and "reveal.js" initialisation script) at the end of the <body>-tag.
          */
         $jsFiles = TgMUtility::buildSourceTag($jsFileArray, '<script type="text/javascript" src="%s"></script> ');
-        $GLOBALS['TSFE']->additionalFooterData[self::EXT_KEY] = $jsFiles.$this->buildScript();
+        $GLOBALS['TSFE']->additionalFooterData['tgm_reveal'] = $jsFiles.$this->buildScript();
     }
 
     /**
@@ -252,7 +247,7 @@ class RevealController extends ActionController
         /**
          * Page id's are used for multiple reveal-presentations to handle presenatation-based overrides.
          */
-        $userFile = 'fileadmin/ext/'.self::EXT_KEY.'/pid'.$GLOBALS['TSFE']->id.'_'.$fileName;
+        $userFile = 'fileadmin/ext/tgm_reveal/pid'.$GLOBALS['TSFE']->id.'_'.$fileName;
 
         /**
          * Fetches the text which is currently stored and the flexform text.
@@ -272,7 +267,7 @@ class RevealController extends ActionController
         /**
          * Replaces special char sequences like "EXT_JS_DIR_PATH:".
          */
-        $textToSave = str_replace('EXT_JS_DIR:', 'typo3conf/ext/'.self::EXT_KEY.'/Resources/Public/JavaScript/', $textToSave);
+        $textToSave = str_replace('EXT_JS_DIR:', 'typo3conf/ext/tgm_reveal/Resources/Public/JavaScript/', $textToSave);
 
         /*
          * Saves data in file.
