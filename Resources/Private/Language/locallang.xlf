@@ -121,7 +121,7 @@
 
 			<trans-unit id="tx_tgm_reveal_flexform_tab_other"><source>Other settings</source></trans-unit>
 			<trans-unit id="tx_tgm_reveal_flexform_enableFancybox"><source>Enable Fancybox \n- more informations here: http://fancyapps.com/fancybox/</source></trans-unit>
-			<trans-unit id="tx_tgm_reveal_flexform_disableBrowserZooming"><source>Disable browser zooming \n- proberly not working in every browser</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_disableBrowserZooming"><source>Disable browser zooming \n- propably not working in every browser</source></trans-unit>
 		</body>
 	</file>
 </xliff>

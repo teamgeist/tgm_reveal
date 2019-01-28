@@ -55,7 +55,7 @@ class BackendViewDrawItemHook implements PageLayoutViewDrawItemHookInterface
         }
 
         $drawItem = false;
-        $headerContent = '<strong>TgM-Reveal</strong><br/>';
+        $headerContent = '<strong>Reveal.js</strong><br/>';
 
         /**
          * Default values.
