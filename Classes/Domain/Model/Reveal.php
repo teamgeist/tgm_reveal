@@ -1,4 +1,5 @@
 <?php
+
 namespace TgM\TgmReveal\Domain\Model;
 
 /***************************************************************
@@ -28,6 +29,8 @@ namespace TgM\TgmReveal\Domain\Model;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /**
- * Reveal
+ * Reveal.
  */
-class Reveal extends AbstractEntity { }
+class Reveal extends AbstractEntity
+{
+}

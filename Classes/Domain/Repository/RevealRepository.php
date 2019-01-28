@@ -1,4 +1,5 @@
 <?php
+
 namespace TgM\TgmReveal\Domain\Repository;
 
 /***************************************************************
@@ -28,6 +29,8 @@ namespace TgM\TgmReveal\Domain\Repository;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
 /**
- * The repository for Reveals
+ * The repository for Reveals.
  */
-class RevealRepository extends Repository { }
+class RevealRepository extends Repository
+{
+}
