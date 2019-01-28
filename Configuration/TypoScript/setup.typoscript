@@ -8,5 +8,5 @@ plugin.tx_tgmreveal._CSS_DEFAULT_STYLE (
 	.typo3-messages .message-ok { color: green; }
 )
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgm_reveal/Configuration/TypoScript/sectionAttributes.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgm_reveal/Configuration/TypoScript/sectionBuilder.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgm_reveal/Configuration/TypoScript/sectionAttributes.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgm_reveal/Configuration/TypoScript/sectionBuilder.typoscript">

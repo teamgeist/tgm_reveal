@@ -1,0 +1,7 @@
+.idea
+
+/vendor/
+/.php_cs.cache
+/composer.lock
+/typo3/
+/index.php

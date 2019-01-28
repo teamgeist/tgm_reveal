@@ -12,7 +12,7 @@
 			<trans-unit id="tx_tgm_reveal_bg_selectBy_link"><source>Direct link</source></trans-unit>
 			<trans-unit id="tx_tgm_reveal_bg_selectBy_link_label"><source>Select your background via direct link</source></trans-unit>
 
-			<trans-unit id="tx_tgm_reveal_contentElementWizard_title"><source>TgM-Reveal</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_contentElementWizard_title"><source>Reveal</source></trans-unit>
 			<trans-unit id="tx_tgm_reveal_contentElementWizard_description"><source>reveal.js-Presentation</source></trans-unit>
 
 			<trans-unit id="tx_tgm_reveal_bg_type"><source>Background type</source></trans-unit>
@@ -22,9 +22,9 @@
 			<trans-unit id="tx_tgm_reveal_bg_type_video"><source>Video</source></trans-unit>
 			<trans-unit id="tx_tgm_reveal_bg_type_iframe"><source>iFrame</source></trans-unit>
 			<trans-unit id="tx_tgm_reveal_bg_color"><source>Color (all CSS color formats are supported)</source></trans-unit>
-			<trans-unit id="tx_tgm_reveal_bg_image_size"><source>Image size (more informations: http://www.w3schools.com/cssref/playit.asp?filename=playcss_background-size)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_image_size"><source>Image size</source></trans-unit>
 			<trans-unit id="tx_tgm_reveal_bg_image_size_placeholder"><source>cover</source></trans-unit>
-			<trans-unit id="tx_tgm_reveal_bg_image_position"><source>Position (more informations: http://www.w3schools.com/cssref/playit.asp?filename=playcss_background-position)</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_bg_image_position"><source>Position</source></trans-unit>
 			<trans-unit id="tx_tgm_reveal_bg_image_position_placeholder"><source>center</source></trans-unit>
 			<trans-unit id="tx_tgm_reveal_bg_image_repeat"><source>Repeat image</source></trans-unit>
 			<trans-unit id="tx_tgm_reveal_bg_image_repeat_noRepeat"><source>no-repeat</source></trans-unit>
@@ -121,7 +121,7 @@
 
 			<trans-unit id="tx_tgm_reveal_flexform_tab_other"><source>Other settings</source></trans-unit>
 			<trans-unit id="tx_tgm_reveal_flexform_enableFancybox"><source>Enable Fancybox \n- more informations here: http://fancyapps.com/fancybox/</source></trans-unit>
-			<trans-unit id="tx_tgm_reveal_flexform_disableBrowserZooming"><source>Disable browser zooming \n- proberly not working in every browser</source></trans-unit>
+			<trans-unit id="tx_tgm_reveal_flexform_disableBrowserZooming"><source>Disable browser zooming \n- propably not working in every browser</source></trans-unit>
 		</body>
 	</file>
 </xliff>
