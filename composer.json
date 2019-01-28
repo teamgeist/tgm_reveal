@@ -1,0 +1,26 @@
+{
+  "name": "ipf/reveal",
+  "description": "Reveal.js package for TYPO3",
+  "type": "typo3-cms-extension",
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "authors": [
+    {
+      "name": "Ingo Pfennigstorf",
+      "email": "i.pfennigstorf@gmail.com"
+    },
+    {
+      "name": "EG",
+      "email": "eg@teamgeist-medien.de"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^8.7.13"
+  },
+  "autoload": {
+    "psr-4": {
+      "TgM\\TgmReveal\\": "Classes"
+    }
+  }
+}
