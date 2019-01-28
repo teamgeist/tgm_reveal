@@ -26,6 +26,8 @@ namespace TgM\TgmReveal\Controller;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
+
+use TgM\TgmReveal\Utility\TgMUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
@@ -43,7 +45,6 @@ class RevealController extends ActionController
      * revealRepository.
      *
      * @var \TgM\TgmReveal\Domain\Repository\RevealRepository
-     * @inject
      */
     protected $revealRepository = null;
 
@@ -68,6 +69,12 @@ class RevealController extends ActionController
      * @var array Contains all flexform settings which are not available for the reveal.js-initialisation-options
      */
     protected $nonJSInitOptions = ['theme', 'userCSS', 'userJS', 'userPlugins', 'enableFancybox', 'disableBrowserZooming'];
+
+    public function __construct(\TgM\TgmReveal\Domain\Repository\RevealRepository $revealRepository)
+    {
+        parent::__construct();
+        $this->revealRepository = $revealRepository;
+    }
 
     /**
      * action list.
@@ -117,12 +124,12 @@ class RevealController extends ActionController
         /*
          * Adds required <link>-tags at the end of the <header>-tag
          */
-        $GLOBALS['TSFE']->additionalHeaderData[self::EXT_KEY] = $this->buildSourceTag($cssFileArray, '<link rel="stylesheet" href="%s" media="all"> ');
+        $GLOBALS['TSFE']->additionalHeaderData[self::EXT_KEY] = TgMUtility::buildSourceTag($cssFileArray, '<link rel="stylesheet" href="%s" media="all"> ');
 
         /**
          * Adds required <source>-tags (and "reveal.js" initialisation script) at the end of the <body>-tag.
          */
-        $jsFiles = $this->buildSourceTag($jsFileArray, '<script type="text/javascript" src="%s"></script> ');
+        $jsFiles = TgMUtility::buildSourceTag($jsFileArray, '<script type="text/javascript" src="%s"></script> ');
         $GLOBALS['TSFE']->additionalFooterData[self::EXT_KEY] = $jsFiles.$this->buildScript();
     }
 
@@ -155,24 +162,6 @@ class RevealController extends ActionController
     }
 
     /**
-     * Builds a html-tag.
-     *
-     * @param array  $data    The array which contains every tag to include
-     * @param string $tagData Predefined html-tag
-     *
-     * @return string Every data with their tags as a single string
-     */
-    private function buildSourceTag(array $data, string $tagData): string
-    {
-        $tag = '';
-        foreach ($data as $filePath) {
-            $tag .= sprintf($tagData, $filePath);
-        }
-
-        return $tag;
-    }
-
-    /**
      *  Builds a script which contains every flexform settings as a JavaScript option.
      */
     private function buildScript(): string
@@ -188,10 +177,10 @@ class RevealController extends ActionController
              */
             $this->resortTypesIfNeeded($flexformSettings);
 
-            /**
+            /*
              * @var string Option name
              */
-            /**
+            /*
              * @var object Option value (assigned by user)
              */
             foreach ($flexformSettings as $flexformKey => $flexformValue) {

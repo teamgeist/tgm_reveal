@@ -1,6 +1,8 @@
 <?php
 
-use TgM\TgmReveal\Controller\RevealController;
+namespace TgM\TgmReveal\Utility;
+
+use TYPO3\CMS\Core\Database\QueryGenerator;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -39,7 +41,7 @@ class TgMUtility
      */
     public static function countPages(int $startPid, int $depth = 10, int $begin = 0): array
     {
-        $foundPages = explode(',', GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Database\\QueryGenerator')->getTreeList($startPid, $depth, $begin, 1));
+        $foundPages = explode(',', GeneralUtility::makeInstance(QueryGenerator::class)->getTreeList($startPid, $depth, $begin, 1));
         array_shift($foundPages);
 
         return $foundPages;
@@ -76,8 +78,26 @@ class TgMUtility
      */
     public static function getEmConf()
     {
-        include ExtensionManagementUtility::extPath(RevealController::EXT_KEY).'ext_emconf.php';
+        include ExtensionManagementUtility::extPath('tgm_reveal').'ext_emconf.php';
         /* @noinspection PhpUndefinedVariableInspection */
-        return $EM_CONF[RevealController::EXT_KEY];
+        return $EM_CONF['tgm_reveal'];
+    }
+
+    /**
+     * Builds a html-tag.
+     *
+     * @param array  $data    The array which contains every tag to include
+     * @param string $tagData Predefined html-tag
+     *
+     * @return string Every data with their tags as a single string
+     */
+    public static function buildSourceTag(array $data, string $tagData): string
+    {
+        $tag = '';
+        foreach ($data as $filePath) {
+            $tag .= sprintf($tagData, $filePath);
+        }
+
+        return $tag;
     }
 }

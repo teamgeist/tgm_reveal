@@ -1,51 +1,72 @@
 <style>
-	/* @formatter:off */
-	.tgm_reveal-backendPreview {position: relative; top: -10px; padding: 15px 20px; margin-top: 11px; background-color: #F9F9F9; border: 1px solid #D6D6D6; border-top: 37px solid #D0D0D0; border-radius: 2px;}
-	.tgm_reveal-backendPreview h3 {text-align: center;}
-	.tgm_reveal-backendPreview .footer {padding: 8px; background-color: #D6D6D6;}
-	.tgm_reveal-backendPreview .footer .externalLink {color: #1B6FC4;}
-	.tgm_reveal-backendPreview .footer .externalLink:hover {text-decoration: underline;}
-	.tgm_reveal-backendPreview .tgm_reveal_settings_table .table-section {background-color: #CDE;}
-	.tgm_reveal-backendPreview .tgm_reveal_settings_table .table-section td {text-align: center; font-weight: bold; text-overflow: ellipsis; white-space: nowrap;}
-	.tgm_reveal-backendPreview .tgm_reveal_settings_table .table-section > td {padding: 0;}
-	.tgm_reveal-backendPreview .tgm_reveal_settings_table .table-section > td a {display: block; padding: 5px;}
-	/* @formatter:on */
+    /* @formatter:off */
+    .tgm_reveal-backendPreview {
+        position: relative;
+        top: -10px;
+        padding: 15px 20px;
+        margin-top: 11px;
+        background-color: #F9F9F9;
+        border: 1px solid #D6D6D6;
+        border-top: 37px solid #D0D0D0;
+        border-radius: 2px;
+    }
+
+    .tgm_reveal-backendPreview h3 {
+        text-align: center;
+    }
+
+    .tgm_reveal-backendPreview .tgm_reveal_settings_table .table-section {
+        background-color: #CDE;
+    }
+
+    .tgm_reveal-backendPreview .tgm_reveal_settings_table .table-section td {
+        text-align: center;
+        font-weight: bold;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .tgm_reveal-backendPreview .tgm_reveal_settings_table .table-section > td {
+        padding: 0;
+    }
+
+    .tgm_reveal-backendPreview .tgm_reveal_settings_table .table-section > td a {
+        display: block;
+        padding: 5px;
+    }
+
+    /* @formatter:on */
 </style>
 <script>
-	// TODO: Replace with Bootstrap collapse
-	$(document).ready(function() {
-		$('tr.collapsible td').hide();
-		$('tr.table-section a').on('click', function(e) {
-			e.stopPropagation();
-			$('.' + $(this).closest('.table-section').attr('data-collapse') + '-collapsible td').toggle();
-		});
-	});
+  // TODO: Replace with Bootstrap collapse
+  $(document).ready(function () {
+    $('tr.collapsible td').hide();
+    $('tr.table-section a').on('click', function (e) {
+      e.stopPropagation();
+      $('.' + $(this).closest('.table-section').attr('data-collapse') + '-collapsible td').toggle();
+    });
+  });
 </script>
 <div class="tgm_reveal-backendPreview">
-	<p>Click on the sections to see it's settings. Click again to hide them.</p>
-	<table class="table tgm_reveal_settings_table">
-		<tbody>
-		<f:for each="{preview}" as="section" key="name">
-			<f:if condition="{name} != 'emConf'">
-				<tr class="table-section" data-collapse="{name -> f:format.case(mode: 'lower')}">
-					<td colspan="3">
-						<a href="#">{name}</a>
-					</td>
-				</tr>
-				<f:for each="{section.settings}" as="settingValue" key="settingKey">
-					<tr class="collapsible {name -> f:format.case(mode: 'lower')}-collapsible">
-						<td>{settingKey}</td>
-						<td>{settingValue}</td>
-						<td>&nbsp;</td>
-					</tr>
-				</f:for>
-			</f:if>
-		</f:for>
-		</tbody>
-	</table>
-	<div class="footer">
-		"tgm_reveal" v.{preview.emConf.extVersion} - Check out our <a class="externalLink" href="http://demo.teamgeist-medien.de/tgm-reveal-presentation.html" target="_blank">extension demo</a>.
-		<br/>
-		<a class="externalLink" href="http://lab.hakim.se/reveal-js/#/" target="_blank">{preview.emConf.extDescription}</a>
-	</div>
+    <p>Click on the sections to see it's settings. Click again to hide them.</p>
+    <table class="table tgm_reveal_settings_table">
+        <tbody>
+        <f:for each="{preview}" as="section" key="name">
+            <f:if condition="{name} != 'emConf'">
+                <tr class="table-section" data-collapse="{name -> f:format.case(mode: 'lower')}">
+                    <td colspan="3">
+                        <a href="#">{name}</a>
+                    </td>
+                </tr>
+                <f:for each="{section.settings}" as="settingValue" key="settingKey">
+                    <tr class="collapsible {name -> f:format.case(mode: 'lower')}-collapsible">
+                        <td>{settingKey}</td>
+                        <td>{settingValue}</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </f:for>
+            </f:if>
+        </f:for>
+        </tbody>
+    </table>
 </div>

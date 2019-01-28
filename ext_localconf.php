@@ -1,6 +1,5 @@
 <?php
 
-use TgM\TgmReveal\Controller\RevealController;
 use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
 use TYPO3\CMS\Core\Imaging\IconRegistry;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
@@ -11,12 +10,12 @@ if (!defined('TYPO3_MODE')) {
     die('Access denied.');
 }
 
-ExtensionUtility::configurePlugin('TgM.'.RevealController::EXT_KEY, 'Reveal', ['Reveal' => 'list, show'], ['Reveal' => '']);
+ExtensionUtility::configurePlugin('TgM.tgm_reveal', 'Reveal', ['Reveal' => 'list, show'], ['Reveal' => '']);
 
 /*
  * Adds the page ts config for the "TgM-Reveal"-plugin
  */
-ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:'.RevealController::EXT_KEY.'/Configuration/TSconfig/ContentElementWizard.txt">');
+ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:tgm_reveal/Configuration/TSconfig/ContentElementWizard.typoscript">');
 
 /*
  * Registeres backend icons (required for wizards of content elements)
@@ -27,7 +26,7 @@ if (TYPO3_MODE === 'BE') {
     /** @var IconRegistry $iconRegistry */
     $iconRegistry = GeneralUtility::makeInstance(IconRegistry::class);
     foreach ($icons as $identifier => $path) {
-        $iconRegistry->registerIcon($identifier, BitmapIconProvider::class, ['source' => 'EXT:'.RevealController::EXT_KEY.'/Resources/Public/Icons/'.$path]);
+        $iconRegistry->registerIcon($identifier, BitmapIconProvider::class, ['source' => 'EXT:tgm_reveal/Resources/Public/Icons/'.$path]);
     }
 }
 

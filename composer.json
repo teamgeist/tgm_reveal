@@ -16,7 +16,8 @@
     }
   ],
   "require": {
-    "typo3/cms-core": "^8.7.13"
+    "typo3/cms-core": "^8.7.13",
+    "components/revealjs": "^3.6"
   },
   "autoload": {
     "psr-4": {
